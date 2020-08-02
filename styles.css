@@ -1,0 +1,815 @@
+
+/* Set up */
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #292929;
+}
+button:focus{
+    outline: none;
+}
+button{
+    cursor: pointer;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.sectionTitle{
+    font-size: 200%;
+}
+
+/* lazy-load */
+
+/* .lazy-load{
+    opacity: 0;
+    will-change: opacity;
+}
+
+.lazy-load.loaded{
+    opacity: 1;
+} */
+
+
+/* Header / Home */
+
+
+header{
+    height: 100vh;
+}
+
+    /* navbar 425px + */
+
+.navbar{
+    display: flex;
+    position: fixed;
+    background-color: #292929;
+    width: 100%;
+    height: 10%;
+    z-index: 99;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+}
+
+.navbar a{
+    font-size: 1.3vw;
+    width: 8%;
+    padding: 0 1%;
+    position: relative;
+    left: 65vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbarContainer{
+    width: 45vw;
+    height: 100%;
+    position: absolute;
+    left: 5vw;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+
+.navbarButtons{
+    border: none;
+    width: 20%;
+    background-color: transparent;
+    color: white;
+    font-size: 1.3vw;
+    transition: 0.1s;
+}
+
+.active, .navbarButtons:hover{
+    background-color: white;
+    color: black;
+}
+
+.ic-lang{
+    position: fixed;
+    top: 15vh;
+    width: 2vw;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.langs h5{
+    margin: 0;
+}
+
+.langs{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #292929;
+}
+.langs:hover{
+    background-color: white;
+    color: black;
+}
+
+    /* Homepage */
+
+
+.home{
+    position: relative;
+    top: 10%;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Letters animation */ 
+
+@keyframes text-shadow {
+    0% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+
+    20% {  
+        transform: translateY(-0.6em);
+        text-shadow: 
+            0 0.125em 0 #0c2ffb, 
+            0 0.25em 0 #2cfcfd, 
+            0 -0.125em 0 #fb203b, 
+            0 -0.25em 0 #fefc4b;
+    }
+
+    40% {  
+        transform: translateY(0.3em);
+        text-shadow: 
+            0 -0.0625em 0 #0c2ffb, 
+            0 -0.125em 0 #2cfcfd, 
+            0 0.0625em 0 #fb203b, 
+            0 0.125em 0 #fefc4b;
+    }
+    
+   60% {
+        transform: translateY(-0.15em);
+        text-shadow: 
+            0 0.03125em 0 #0c2ffb, 
+            0 0.0625em 0 #2cfcfd, 
+            0 -0.03125em 0 #fb203b, 
+            0 -0.0625em 0 #fefc4b;
+    }
+
+    85% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+}
+.highlightLetters{
+    animation: text-shadow 1s ease-in-out 1;   
+}
+
+.highlight span{
+    display: inline-block
+}
+
+header img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.homeLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeRight{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#inter{
+    height: 50%;
+    border: #c6c4c4 1px solid; 
+}
+
+.homeRight h3{
+    margin: 0 17%;
+}
+
+.home h1{
+    font-size: 5vw;
+    line-height: 15vh;
+    margin-bottom: 0;
+}
+.home h3{
+    font-size: 1.7vw;
+}
+
+/* Projects */
+
+
+.projects{
+    padding: 1% 0 2% 0;
+    background-color: #f5f2f0;  
+    -webkit-box-shadow: inset 0px 20px 15px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 20px 15px -10px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 20px 15px -10px rgba(0,0,0,0.75);
+    height: auto;
+}
+
+.projectsContainer{
+    padding: 2% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    /* Projects boxes */
+
+.boxContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    transform-style: preserve-3d;
+    flex-wrap: wrap;
+}
+
+.box{
+    position: relative;
+    min-width: 450px;
+    width: 26vw;
+    height: 50vh;
+    perspective: 1000px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    margin: 40px 10px;
+}
+.fakeBox{
+    pointer-events:none;
+}
+
+.imgBox{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: top;
+    transform-style: preserve-3d;
+    transition: .7s .4s;
+}
+
+.box:hover .imgBox{
+    transform: rotateX(-90deg);
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    transform: rotateX(90deg); /* transform */
+    opacity: 0;
+    transition: .7s;
+    background: #292929;
+}
+
+.contentBox a{
+    font-size: 2vw;
+}
+
+.box:hover .contentBox{
+    transform: rotateX(0deg);
+    opacity: 100;
+    transition-delay: .4s;
+}
+
+.boxText{
+    margin: 2%;
+    color: white;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.boxText h2{
+    margin: 0;
+}
+
+.contentBox img{
+    position: absolute;
+    top: 0;
+    left: 0;    
+    z-index: -1;
+    height: 100%;
+    opacity: 60%;
+    object-fit: cover;
+}
+
+.contentBox video{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.gitIcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.gitIcon a{
+    padding-left: 2%;
+}
+
+
+/* About */
+
+
+.about{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0;
+}
+
+.aboutContent{
+    width: 60%;
+}
+
+#facepic{
+    position: relative;
+    width: 40%;
+    min-width: 220px;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+    float: left;
+    padding: 3% 4% 3% 0;
+}
+
+.aboutContent{
+    font-size: 135%;
+    line-height: 30px;
+}
+
+.pBlock{
+    display: inline-block;
+    margin: 0;
+}
+.pPadd1{
+    padding-top: 6%;
+}
+.pPadd2{
+    padding-top: 4%;
+}
+
+.skills{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skillsDiv{
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+}
+.skillsDiv div{
+    position: relative;
+    padding: 4% 7%;
+    display: flex;
+    justify-content: center;
+}
+.skills i{
+    font-size: 4vw;
+}
+
+/* Logos */
+
+.skillsDiv_2{
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+}
+
+.skillsDiv_2 div{
+    position: relative;
+    padding: 4% 7%;
+}
+
+.skills i:hover ~ .skillsTooltip{
+    display: block;
+}
+.skillsTooltip{
+    display: none;
+    position: absolute;
+    top: -30px;
+    background: #333;
+    color: #fff;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 0px 5px;
+    font-size: 1vw;
+}
+.skills img{
+    width: 5vw;
+    height: 10vh;
+}
+.skills img:hover ~ .skillsTooltip{
+    display: block;
+}
+
+
+
+/* Contacts */
+
+
+.contacts{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2% 0;
+    background-color: #292929;
+    color: white;
+}
+
+.contacts p{
+    padding: 0;
+    margin: 0;
+}
+
+.contactsContainer{
+    display: flex;
+    padding-top: 2%;
+    justify-content: center;
+    width : 100%;
+}
+
+.contactsContainer div{
+    display: flex;
+    align-items: center;
+    padding-right: 2vw;
+}
+
+.contactsContainer i{
+    font-size: 2vw;
+    padding-right: .7vw;
+}
+
+.contactsContainer a{
+    transition: .5s;
+}
+
+.contactsContainer a:hover{
+    transform: scale(1.15);
+}
+
+#openTab{
+    font-size: 1vw;
+    padding-left: .5vw;
+}
+
+#ic-mail{
+    color: #ff6e1f;
+}
+#ic-linkedin{
+    color: #00577f;
+}
+#ic-discord{
+    color: #7185d6;
+}
+#ic-github{
+    color: white;
+}
+#ic-CV{
+    color: #ffe75e;
+}
+
+#interB{
+    left: 25%;
+    position: absolute;
+    width: 50%;
+    border: #c6c4c4 1px solid;
+}
+
+.footer{
+    color: white;
+    height: 7vh;
+    background-color: #292929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* navbar 425px - */
+
+.mobileNavWrap{
+    z-index: 99;
+    position: relative;
+    bottom: 8vh;
+    display: none;
+    width: 100vw;
+}
+
+.mobileNav{
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #016dff;
+    width: 100%;
+    height: 8vh;
+    color: white;
+}
+
+.mobileNav div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2%;
+}
+
+.mobileNav button{
+    background-color: transparent;
+    border: none;
+    font-size: 3vw;
+    color: white;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1440px){
+    .contentBox a{
+        font-size: 2.5vw;
+    }
+    .sectionTitle{
+        font-size: 150%;
+    }
+    .ic-lang{
+        width: 2.5vw;
+    }
+    .hoverTest2{
+        height: auto;
+    }
+    .skillsDiv_2 img{
+        width: 4vw;
+        height: 7vh;
+    }
+    .pPadd1{
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .contentBox a{
+        font-size: 3vw;
+    }
+    .contactsContainer{
+        position: relative;
+        width: auto;
+        flex-direction: column;
+    }
+    .contactsContainer div{
+        padding: 2% 0;
+    }
+    .contactsContainer i{
+        font-size: 3vw;
+    }
+    .box{
+        width: 40vw;
+    }
+    .aboutContent{
+        font-size: 100%;
+        width: 70%;
+    }
+    .home h3{
+        font-size: 130%;
+    }
+    .ic-lang{
+        width: 3vw;
+    }
+    .skillsDiv_2 img{
+        width: 4vw;
+        height: 6vh;
+    }
+    #openTab{
+        font-size: 1.5vw;
+    }
+    .skillsTooltip{
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .contentBox a{
+        font-size: 4vw;
+    }
+    .homeLeft h1{
+        font-size: 9vw;
+    }
+    .homeLeft h3{
+        font-size: 3.5vw;
+    }
+    .homeRight h3{
+        font-size: 3vw;
+        line-height: 4vh;
+    }
+    .homeLeft div{
+        text-align: center;
+    }
+    .navbarButtons{
+        font-size: 1.8vw;
+        width: auto;
+    }
+    .navbar a{
+        width: 15%;
+        left: 70vw;
+        font-size: 1.8vw;
+    }
+    .navbarContainer{
+        justify-content: space-evenly;
+        width: 55vw;
+    }
+    .contentBox div p{
+        font-size: 14px;
+    }
+    .contentBox div h2{
+        font-size: 17px;
+    }
+    .contactsContainer div{
+        padding: 5px 0;
+    }
+    .contactsContainer i{
+        font-size: 4vw;
+    }
+    .projectsContainer{
+        padding: 4% 2%;
+    }
+    .about{
+        padding: 5% 0;
+    }
+    .aboutContent{
+        width: 90%;
+    }
+    .skills i{
+        font-size: 6vw;
+    }
+    .ic-lang{
+        width: 5vw;
+        top: 0;
+        position: relative;
+        font-size: 2.5vw;
+    }
+    .box{
+        width: 75vw;
+        min-width: 0;
+    }
+    .skillsDiv_2 img{
+        width: 5.5vw;
+    }
+    #openTab{
+        font-size: 2vw;
+        padding-left: 10px;
+    }
+    .skillsTooltip{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 425px){
+    body{
+        margin: 0 0 8vh 0;
+    }
+    .contentBox a{
+        font-size: 8vw;
+    }
+    .box{
+        height: 45vh;
+        width: 95vw;
+    }
+    .contentBox div p{
+        font-size: 14px;
+    }
+    .contentBox div h2{
+        font-size: 14px;
+    }
+    .contactsContainer i{
+        font-size: 5vw;
+    }
+    .contactsContainer div{
+        padding: 5px 0;
+    }
+    .aboutContent{
+        width: 90%;
+        font-size: 90%;
+        line-height: 22px;
+    }
+    #facepic{
+        float: none;
+        width: 100%;
+        height: 50vh;
+    }
+    .navbar{
+        display: none;
+    }
+    .home{
+        flex-direction: column;
+        top: 0;
+    }
+    .homeLeft{
+        width: 100%;
+    }
+    .homeLeft h3{
+        font-size: 6vw;
+    }
+    .homeRight{
+        width: 100%;
+        text-align: center;
+    }
+    .homeRight h3{
+        font-size: 4.7vw;
+    }
+    #inter{
+        height: auto;
+        width: 50%;
+    }
+    .mobileNavWrap{
+        display: block;
+    }
+    .sectionTitle{
+        font-size: 130%;
+    }
+    .skills{
+        width: 100%;
+    }
+    .skills i{
+        font-size: 8vw;
+    }
+    .ic-lang{
+        font-size: 3vw;
+        position: fixed;
+        top: 80vh;
+        width: 8vw;
+    }
+    .skillsDiv_2 img{
+        width: 9vw;
+    }
+    #openTab{
+        font-size: 3vw;
+    }
+    .skillsTooltip{
+        font-size: 3vw;
+    }
+}
