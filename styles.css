@@ -25,14 +25,13 @@ a{
 
 /* lazy-load */
 
-/* .lazy-load{
+.lazy-load{
     opacity: 0;
-    will-change: opacity;
 }
 
-.lazy-load.loaded{
+.loaded{
     opacity: 1;
-} */
+}
 
 
 /* Header / Home */
@@ -263,7 +262,7 @@ header img{
     position: relative;
     min-width: 450px;
     width: 26vw;
-    height: 50vh;
+    height: 45vh;
     perspective: 1000px;
     overflow: hidden;
     transform-style: preserve-3d;
@@ -459,9 +458,12 @@ header img{
     padding: 0px 5px;
     font-size: 1vw;
 }
-.skills img{
+.skillsDiv_2 img{
     width: 5vw;
     height: 10vh;
+}
+.skillsDiv_2 div:nth-child(1) img{
+    width: 4vw;
 }
 .skills img:hover ~ .skillsTooltip{
     display: block;
@@ -686,7 +688,7 @@ header img{
         font-size: 14px;
     }
     .contentBox div h2{
-        font-size: 17px;
+        font-size: 21px;
     }
     .contactsContainer div{
         padding: 5px 0;
@@ -719,6 +721,9 @@ header img{
     .skillsDiv_2 img{
         width: 5.5vw;
     }
+    .skillsDiv_2 div:nth-child(1) img{
+        width: 5.5vw;
+    }
     #openTab{
         font-size: 2vw;
         padding-left: 10px;
@@ -743,7 +748,7 @@ header img{
         font-size: 14px;
     }
     .contentBox div h2{
-        font-size: 14px;
+        font-size: 18px;
     }
     .contactsContainer i{
         font-size: 5vw;
@@ -805,6 +810,9 @@ header img{
     }
     .skillsDiv_2 img{
         width: 9vw;
+    }
+    .skillsDiv_2 div:nth-child(1) img{
+        width: 8vw;
     }
     #openTab{
         font-size: 3vw;

@@ -1,4 +1,4 @@
-
+"use strict"
 $(document).ready(function () {
 
     /* letters animation */
@@ -27,37 +27,15 @@ $(document).ready(function () {
         $(this).removeClass("highlightLetters")
     })
 
-    let boxes = $(".box")
+    /* video plays on hover */
+    const boxes = $(".box")
     boxes.on("mouseenter", function () {
-        var el = $(this).children(".contentBox").children("video").get(0)
+        const el = $(this).children(".contentBox").children("video").get(0)
         el.play()
     }).on("mouseleave", function () {
-        var el = $(this).children(".contentBox").children("video").get(0)
+        const el = $(this).children(".contentBox").children("video").get(0)
         el.pause()
     })
-
-    /**
-     * Lazy load
-     */
-
-    // const lazyLoadElements = document.querySelectorAll(".lazy-load")
-
-    // for (const element of lazyLoadElements) {
-
-    //     if (element.complete) {
-
-    //         window.setTimeout(() => {
-    //             element.classList.add("loaded")
-    //             element.classList.remove("lazy-load")
-    //         }, 1000)
-
-    //     }
-
-    //     element.onload = () => {
-    //         element.classList.add("loaded")
-    //         element.classList.remove("lazy-load")
-    //     }
-    // }
 
 })
 
@@ -74,6 +52,7 @@ var firebaseConfig = {
     appId: "1:619769391706:web:75b55fd1e53200c0fd4663"
 };
 firebase.initializeApp(firebaseConfig);
+
 
 /**
  * Resize
